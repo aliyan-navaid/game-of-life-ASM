@@ -1,0 +1,1 @@
+EXTERN something@0:PROC
