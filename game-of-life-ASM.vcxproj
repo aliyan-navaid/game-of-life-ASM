@@ -139,11 +139,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <MASM Include="src\game.asm" />
+    <MASM Include="src\helper.asm" />
     <MASM Include="src\main.asm" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
     <None Include="src\game.inc" />
+    <None Include="src\helper.inc" />
     <None Include="style-guide.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

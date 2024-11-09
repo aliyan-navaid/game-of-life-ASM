@@ -21,11 +21,17 @@
     <MASM Include="src\game.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="src\helper.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="style-guide.md" />
     <None Include="README.md" />
     <None Include="src\game.inc">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="src\helper.inc">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>

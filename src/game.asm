@@ -2,9 +2,16 @@ INCLUDE Irvine32.inc
 
 .CODE
 
-sample PROC
-  call dumpregs
+initialize_grid PROC
   ret
-sample ENDP
+initialize_grid ENDP
+
+display_grid PROC
+  ret
+display_grid ENDP
+
+update_grid PROC
+  ret
+update_grid ENDP
 
 END
