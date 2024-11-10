@@ -7,8 +7,8 @@ INCLUDE helper.inc
 main PROC
   start:
     ; Display the start menu and get user choice
-    CALL display_start_menu@0
-    CALL get_user_choice@0
+    CALL display_start_menu
+    CALL get_user_choice
 
     ; Choice: Start Simulation
     cmp eax, 1
@@ -19,7 +19,7 @@ main PROC
     JE terminate
         
     ; Invalid Choice
-    CALL invalid_choice@0
+    CALL invalid_choice
     JMP start
 
   terminate:
