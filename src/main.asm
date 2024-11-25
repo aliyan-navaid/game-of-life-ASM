@@ -38,8 +38,8 @@ main PROC
     CALL clrscr
 	  
     CALL dumpregs             ; Debugging purpose
-    ; CALL initialize_grid
-    ; CALL display_grid
+    ; CALL Initialize_Grid
+    ; CALL Display_Grid
     ; CALL update_grid
 
     MOV EAX, 500
