@@ -1,3 +1,4 @@
-EXTERN initialize_grid@0:PROC
-EXTERN display_grid@0:PROC
-EXTERN update_grid@0:PROC
+initialize_grid PROTO
+display_grid PROTO
+update_grid PROTO
+CountNeighbors PROTO column_index:byte, row_index:byte
