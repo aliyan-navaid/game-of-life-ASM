@@ -1,4 +1,4 @@
-INCLUDE irvine32.inc ;edit by abdullah
+INCLUDE irvine32.inc
 INCLUDE game.inc
 INCLUDE helper.inc
 
@@ -37,9 +37,9 @@ main PROC
   game_loop:
     CALL clrscr
 	  
-    CALL dumpregs             ; Debugging purpose
-    ; CALL Initialize_Grid
-    ; CALL Display_Grid
+    ;CALL dumpregs             ; Debugging purpose
+    CALL Initialize_Grid
+    CALL Display_Grid
     ; CALL update_grid
 
     MOV EAX, 500

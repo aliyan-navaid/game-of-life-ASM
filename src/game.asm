@@ -1,5 +1,10 @@
 INCLUDE Irvine32.inc
 
+.DATA
+  rows DWORD 20                ; Number of rows in the 2D array
+  cols DWORD 50                ; Number of columns in the 2D array
+  array DWORD 1000 DUP(0)
+
 .CODE
 
 Initialize_Grid PROC
@@ -48,7 +53,7 @@ L2:
     je PrintFilledBlock
 
     ; If the value is 0, print a lighter block
-    mov al, 0B0h               ; ASCII value for the light block character
+    mov eax, 0               ; ASCII value for the light block character
     call WriteChar
     jmp PrintSpace            ; Skip printing a space and continue
 
