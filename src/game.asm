@@ -35,17 +35,31 @@ Display_Grid PROC
     lea esi, array            ; Load address of the array into ESI
     mov edx, cols             ; Number of columns per row
     
-L1: 
+L1:
     push ecx                  ; Save the row counter
     mov ecx, edx              ; Inner loop for columns
 
-L2: 
+L2:
     mov eax, [esi]            ; Load the current element from the array
     add esi, 4                ; Move to the next element
-    call WriteDec  
-    ; Print the value
-    mov al," "
-    call WriteChar            ; Print a space for readability
+    
+    ; If the value is 1, print a filled block
+    cmp eax, 1
+    je PrintFilledBlock
+
+    ; If the value is 0, print a lighter block
+    mov al, 0B0h               ; ASCII value for the light block character
+    call WriteChar
+    jmp PrintSpace            ; Skip printing a space and continue
+
+PrintFilledBlock:
+    mov al, 0DBh                ; ASCII value for the filled block character
+    call WriteChar
+
+PrintSpace:
+    mov al, ' '               ; Print a space for readability
+    call WriteChar
+
     loop L2                   ; Repeat for all columns
 
     call Crlf                 ; Move to a new line after each row
@@ -54,7 +68,6 @@ L2:
 
     ret
 Display_Grid ENDP
-
 
 update_grid PROC
   ret
